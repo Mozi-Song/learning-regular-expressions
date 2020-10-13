@@ -30,5 +30,32 @@ Notes of 正则表达式必知必会
 
 
 # 第三章 匹配一组字符
-### 1. 元字符[]的含义是什么？
+### 1. 元字符 [ ] 的含义是什么？
+
+### 2. 如何排除某些字符？
+
+# 第四章 使用元字符
+### 1. 空白元字符都有哪些，代表什么含义？
+
+### 2. 与换行有关的符号有哪些，代表什么含义？
+（参考来源https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019KZDSA2）
+The Carriage Return ("CR") character (0x0D, \r) moves the cursor to the beginning of the line without advancing to the next line. This character is used as the new line character in Commodore and Early Macintosh operating systems (Mac OS 9 and earlier).
+
+ The Line Feed ("LF") character (0x0A, \n) moves the cursor down to the next line without returning to the beginning of the line. This character is used as the new line character in Unix based systems (Linux, macOS X, Android,etc).
+
+ The End of Line ("EOL") character (0x0D0A, \r\n) is actually two ASCII characters and is a combination of the CR and LF characters. It moves the cursor both down to the next line and to the beginning of that line. This character is used as the new line character in most other non-Unix operating systems, including Microsoft Windows and Symbian OS.
+ 
+ ### 3. 应如何同时匹配Windows和Linux的空白行？
+ 
+ ### 4. 什么是类元字符，它们是不是必要的？
+ 
+ ### 5. 与数字有关的类元字符有哪些？
+ 
+ ### 6. 与字母数字有关的类元字符有哪些？
+ 
+ ### 7. 与空白字符有关的类元字符有哪些？
+ 
+ 
+ 
+ 
 
