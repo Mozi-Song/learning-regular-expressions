@@ -38,16 +38,20 @@ Notes of 正则表达式必知必会
 ### 1. 空白元字符都有哪些，代表什么含义？
 | 元字符          | 说明               |
 | :------------- | :----------------:| 
-| [b]            | 回退（backspace）   | 
+| [\b]            | 回退（backspace）   | 
 | \f             | 换页符              |
 | \n             | 换行符              |
 | \r             | 回车符              |
-| \f             | 换页符              |
 | \t             | 制表符（Tab）        |
 | \v             | 垂直制表符           |
 
 
 ### 2. 与换行有关的符号有哪些，代表什么含义？
+| 元字符          | 说明               |
+| :------------- | :----------------:| 
+| \r             | 将光标移到当前行的开始，不进行到下一行   | 
+| \n             | 将光标移到下一行，不移到行首   | 
+
 （参考来源https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019KZDSA2）
 The Carriage Return ("CR") character (0x0D, \r) moves the cursor to the beginning of the line without advancing to the next line. This character is used as the new line character in Commodore and Early Macintosh operating systems (Mac OS 9 and earlier).
 
@@ -56,16 +60,26 @@ The Carriage Return ("CR") character (0x0D, \r) moves the cursor to the beginnin
  The End of Line ("EOL") character (0x0D0A, \r\n) is actually two ASCII characters and is a combination of the CR and LF characters. It moves the cursor both down to the next line and to the beginning of that line. This character is used as the new line character in most other non-Unix operating systems, including Microsoft Windows and Symbian OS.
  
  ### 3. 应如何同时匹配Windows和Linux的空白行？
- 
+ Windows系统使用的文本行结束标记是\r\n，而Unix/Linux及Mac OSX只使用\n。
+ 理想的正则表达式应该能适应这种情况：包含一个可选的\r和必须匹配的\n。
  ### 4. 什么是类元字符，它们是不是必要的？
- 
+ 类元字符代表一些常用的字符集合，它不是必不可少的，总能通过逐一列举有关字符或定义字符区间来实现相同的效果。不过类元字符在实践中极其有用。
  ### 5. 与数字有关的类元字符有哪些？
- 
+| 元字符          | 说明               |
+| :------------- | :----------------:| 
+| \d             | 任何一个数字字符（等价于[0-9]）   | 
+| \D             | 任何一个非数字字符（等价于[^0-9]) |
  ### 6. 与字母数字有关的类元字符有哪些？
- 
+| 元字符          | 说明               |
+| :------------- | :----------------:| 
+| \w             | 任何一个字母数字字符或下划线字符（等价于[a-zA-Z0-9_]）   | 
+| \W             | 任何一个非字母数字字符或下划线字符（等价于[^a-zA-Z0-9_]) |
  ### 7. 与空白字符有关的类元字符有哪些？
- 
- 
+| 元字符          | 说明               |
+| :------------- | :----------------:| 
+| \s             | 任何一个空白字符（等价于[\f\n\r\t\v]）   | 
+| \S             | 任何一个非空白字符（等价于[^\f\n\r\t\v]）  |
+注：用来匹配退格字符的[\b]元字符不在\s的覆盖范围内，\S也没有将其排除。
  
  
 
