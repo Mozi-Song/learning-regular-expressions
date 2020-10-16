@@ -128,3 +128,5 @@ The Carriage Return ("CR") character (0x0D, \r) moves the cursor to the beginnin
 ### 6.如何区分^元字符的两种用法？
 
 ### 7.模式 ^.\*$ 几乎总能找到一个匹配，在什么情况下它会找不到任何匹配？
+
+### 8.如何开启多行模式，它适用于什么场景？
