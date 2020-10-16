@@ -121,4 +121,10 @@ The Carriage Return ("CR") character (0x0D, \r) moves the cursor to the beginnin
 
 ### 3.如何在下列字符串中匹配到前后都有多余空格的连字符，解释其匹配原理：Please enter the nine-digit id as it appears on your color - coded pass-key.
 
+### 4.\b既可以匹配单词开头也能匹配单词结尾，有没有更精确的控制方法？有何局限？
 
+### 5.如何匹配字符串的开头和结尾？
+
+### 6.如何区分^元字符的两种用法？
+
+### 7.模式 ^.\*$ 几乎总能找到一个匹配，在什么情况下它会找不到任何匹配？
