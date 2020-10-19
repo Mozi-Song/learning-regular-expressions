@@ -132,7 +132,12 @@ The Carriage Return ("CR") character (0x0D, \r) moves the cursor to the beginnin
 
 `This offer is not available to customers living in *<b>AK</b> and <b>HI</b>*.`
 ### 13.懒惰型量词是什么，用来解决什么问题？举例说明。
-
+懒惰型量词会匹配尽可能少的字符，而非尽可能多地去匹配。懒惰型量词的写法是贪婪型量词的后面加上一个`?`。
+| 贪婪型量词          | 懒惰型量词               |
+| :------------- | :----------------:| 
+| `*`             | `*?`   | 
+| `+`             | `+?`   | 
+| `{n,}`             | `{n,}?`   | 
 # 第6章 位置匹配
 ### 1.如何匹配单词边界？这个元字符的意义是什么，它具体匹配什么？
 
